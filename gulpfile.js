@@ -25,6 +25,8 @@ gulp.task('clean', function(cb) {
 gulp.task('default', ['clean'], function() {
 	gulp.start('minifycss', 'minifyjs','watch');
 });
+gulp.task('watch',function() {
+  gulp.watch(['js/*.js','css/*.css'], ['default']);
+})
 
-gulp.watch(['js/*.js','css/*.css'], ['default']);
 
